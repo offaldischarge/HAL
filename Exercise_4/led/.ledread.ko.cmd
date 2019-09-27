@@ -1,0 +1,1 @@
+cmd_/home/stud/HAL/Exercise_4/led/ledread.ko := arm-poky-linux-gnueabi-ld -r  -EL -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds  --build-id  -o /home/stud/HAL/Exercise_4/led/ledread.ko /home/stud/HAL/Exercise_4/led/ledread.o /home/stud/HAL/Exercise_4/led/ledread.mod.o ;  true
