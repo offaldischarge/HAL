@@ -110,13 +110,10 @@ ssize_t ledgpio_read(struct file *filep, char __user *buf,
 
 ssize_t ledgpio_write(struct file *filep, const char __user *ubuf, size_t count, loff_t *f_pos){
 
-    char write_buf[16];
+    char write_buf[count];
     int write_val;
-    int ubuf_len = strlen(ubuf);
 
-    ubuf_len = ubuf_len > count ? count : ubuf_len;
-
-    unsigned long err = copy_from_user(write_buf, ubuf, ubuf_len);
+    unsigned long err = copy_from_user(write_buf, ubuf, count);
     if(err < 0){
         printk("Error copying from user");
     }

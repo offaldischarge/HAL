@@ -1,0 +1,14 @@
+*.DS_Store
+
+# Ignore module compilation
+*.ko
+*.cmd
+*.symvers
+*.order
+*.ko
+*.o
+*.mod.c
+*.*.ko.cmd
+*.*.mod.o.cmd
+*.*.o.cmd
+**/.tmp_versions
