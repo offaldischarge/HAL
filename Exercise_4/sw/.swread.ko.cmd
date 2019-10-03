@@ -1,1 +1,0 @@
-cmd_/home/stud/HAL/Exercise_4/sw/swread.ko := arm-poky-linux-gnueabi-ld -r  -EL -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds  --build-id  -o /home/stud/HAL/Exercise_4/sw/swread.ko /home/stud/HAL/Exercise_4/sw/swread.o /home/stud/HAL/Exercise_4/sw/swread.mod.o ;  true
