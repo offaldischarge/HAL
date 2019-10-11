@@ -70,7 +70,7 @@ static int __init sw_init(void){
 
     sw_gpio_irq = gpio_to_irq(SW_GPIO);
 
-    err = request_irq(sw_gpio_irq, &sw_gpio_isr, IRQF_TRIGGER_FALLING, "sw_gpio_irq", NULL);
+    err = request_irq(sw_gpio_irq, &sw_gpio_isr, IRQF_TRIGGER_RISING, "sw_gpio_irq", NULL);
     if(err){
         printk("sw_gpio: can't get assigned irq %d\n", sw_gpio_irq);
     } else {
@@ -129,7 +129,7 @@ ssize_t swgpio_read(struct file *filep, char __user *buf,
     char valbuf[16];
 
 
-    sprintf(valbuf, "%i %i\n", proc_gpio_value, isr_gpio_value);
+    sprintf(valbuf, "%i%i ", proc_gpio_value, isr_gpio_value);
 
     int valbuf_len = strlen(valbuf) + 1;
     valbuf_len = valbuf_len > count ? count : valbuf_len;
