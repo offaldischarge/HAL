@@ -1,0 +1,2 @@
+spi_drv-overlay.o: \
+ /home/stud/HAL/Exercise_7/psocdriver/spi_drv/spi_drv-overlay.dts
